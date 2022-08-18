@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { getProductTemptResponse } from '../utils/temperatureUtil';
+import { getProductTemptResponse } from '../utils/temperatureUtil.js';
 
 const SERVICE_URL = 'https://temperature-sensor-service.herokuapp.com';
 
