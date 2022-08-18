@@ -1,5 +1,23 @@
 # Coding Test Submissions
 
+### How to run
+
+- **Front-end**
+
+```bash
+> cd front-end
+> yarn
+> yarn start
+```
+
+- **Back-end**
+
+```bash
+> cd back-end
+> yarn
+> yarn start
+```
+
 ## _1. Highlights of your improvements_
 
 - **Front-end**
