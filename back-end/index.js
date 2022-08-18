@@ -1,19 +1,14 @@
-const express = require('express');
-const fetch = require('node-fetch');
-const cors = require('cors');
+import express from 'express';
+import cors from 'cors';
+import morgan from 'morgan';
+import * as temperatureController from './src/controllers/temperatureController.js';
 
 const app = express();
 const port = 8081;
 
 app.use(cors());
-
-app.get('/temperature/:id', (req, res) => {
-  fetch(
-    `https://temperature-sensor-service.herokuapp.com/sensor/${req.params.id}`
-  )
-    .then((response) => response.json())
-    .then((response) => res.send(response));
-});
+app.use(morgan('tiny'));
+app.get('/temperature/:id', temperatureController.getByProductId);
 
 app.listen(port, () => {
   console.log(`SensorTech server at http://localhost:${port}`);
